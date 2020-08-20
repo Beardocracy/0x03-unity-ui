@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody rb;
-    public float speed = 600f;
+    public float speed = 900f;
     private int score = 0;
     public int health = 5;
+    public Text scoreText;
 
     // Start is called before the first frame update
     void Start()
@@ -56,11 +58,17 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(other.gameObject);
             score += 1;
-            Debug.Log("Score: " + score);
+            SetScoreText();
+            //Debug.Log("Score: " + score);
         }
         if (other.tag == "Goal")
         {
             Debug.Log("You win!");
         }
+    }
+
+    void SetScoreText()
+    {
+        scoreText.text = $"Score: {score}";
     }
 }
