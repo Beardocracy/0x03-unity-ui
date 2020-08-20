@@ -27,6 +27,10 @@ public class PlayerController : MonoBehaviour
             SetGameOver();
             StartCoroutine(LoadScene(3));
         }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+        SceneManager.LoadScene("menu");
+        }
     }
 
     // Update is called once per frame
@@ -48,6 +52,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(0, 0, -speed * Time.deltaTime);
         }
+        
     }
 
     void OnTriggerEnter(Collider other)
