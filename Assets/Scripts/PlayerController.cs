@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private int score = 0;
     public int health = 5;
     public Text scoreText;
+    public Text healthText;
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +53,8 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Trap")
         {
             health -= 1;
-            Debug.Log("Health: " + health);
+            SetHealthText();
+            //Debug.Log("Health: " + health);
         }
         if (other.tag == "Pickup")
         {
@@ -70,5 +72,10 @@ public class PlayerController : MonoBehaviour
     void SetScoreText()
     {
         scoreText.text = $"Score: {score}";
+    }
+
+    void SetHealthText()
+    {
+        healthText.text = $"Health: {health}";
     }
 }
