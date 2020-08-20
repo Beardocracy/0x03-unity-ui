@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
         {
             //Debug.Log("Game Over!");
             SetGameOver();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            StartCoroutine(LoadScene(3));
         }
     }
 
@@ -102,5 +102,11 @@ public class PlayerController : MonoBehaviour
         winLoseText.color = Color.white;
         img.color = Color.red;
         parent.SetActive(true);
+    }
+
+    IEnumerator LoadScene(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
