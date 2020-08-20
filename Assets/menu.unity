@@ -447,7 +447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &649207723
 RectTransform:
   m_ObjectHideFlags: 0
@@ -482,6 +482,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0053596b2fc349d4eb2753c1825f90da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trapMat: {fileID: 2100000, guid: 7ab998f32b3081748b53f9f1806ccc55, type: 2}
+  goalMat: {fileID: 2100000, guid: d567435dddc88a947b9632c55b0305c9, type: 2}
+  colorblindMode: {fileID: 215781669}
 --- !u!1 &657573917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,7 +1850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2134104762
 RectTransform:
   m_ObjectHideFlags: 0
